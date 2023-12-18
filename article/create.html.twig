@@ -1,0 +1,10 @@
+{% extends 'base.html.twig'%}
+
+{% block title %}
+	Nouvel article
+{% endblock %}
+{% block body  %}
+	<h1>Création d'un article</h1>
+	{{ form_start(formArticle)}}
+	{{include ("article/_form.html.twig")}}
+{% endblock %}

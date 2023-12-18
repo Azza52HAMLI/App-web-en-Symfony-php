@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Articles
+{% endblock %}
+{% block body %}
+	<h1>Liste des articles</h1>
+	{% for art in articles%}
+		<h3>
+			<a href="{{path('article_show',{id: art.id})}}">{{art.libelle}}
+				({{art.reference}})</a>
+		</h3>
+		<p>Prix:
+			{{art.Prix}}
+			D</p>
+	{% endfor %}
+{% endblock %}

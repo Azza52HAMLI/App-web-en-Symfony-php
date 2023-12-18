@@ -1,0 +1,15 @@
+{% block title %}
+	Nouvel article
+{% endblock %}
+{% block body  %}
+	<h1>Création d'un article</h1>
+	{{ form_start(formArticle)}}
+	{{ form_row(formArticle.reference, {'attr':{'placeholder': "Référence de larticle"}
+	,'help': 'reference doit avoir ce format: ABCD-123'})}}
+
+	{{ form_row(formArticle.libelle, {'attr':{'placeholder': "libellé de larticle"}})}}
+	{{ form_row(formArticle.prix, {'attr':{'placeholder': "prix de larticle"}})}}
+	{{ form_row(formArticle.Categorie)}}
+	<input type="submit" value="{{valeurBtnSubmit|default("Ajouter article")}}" formnovalidate>
+	{{ form_end(formArticle)}}
+{% endblock %}

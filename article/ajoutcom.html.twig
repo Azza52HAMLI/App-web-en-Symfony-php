@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une commande
+{% endblock %}
+
+{% block body %}
+	<h1>Ajouter une commande</h1>
+
+	{{ form_start(formCommande)}}
+	{{ form_row(formCommande.qte, {'attr':{'placeholder': "quantite  "}
+	,'help': 'quantite doit etre positif'})}}
+
+	{{ form_row(formCommande.date, {'attr':{'placeholder': "date de commande"}})}}
+
+	{{ form_row(formCommande.Categorie)}}
+	<input type="submit" value="{{valeurBtnSubmit|default("Ajouter commande")}}" formnovalidate>
+	{{ form_end(formCommande)}}
+{% endblock %}
